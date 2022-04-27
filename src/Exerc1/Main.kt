@@ -1,16 +1,5 @@
 package Exerc1
 
-/*
-classe caixa recebe produtos e cadastra na lista
-exibe os produtos cadastrados nessa lista
-soma os valores da lista
-
-classe produtos  atributos nome, valor, qntidade
-
-no main criar 5 objetos produto -> estático ou dinâmico
-1 objeto caixa realizar as ações de cadastro, exibir e exibir valor total
-*/
-
 fun main() {
     var produtoLeite: Produto = Produto("leite", 4.35, 6)
     var produtoPao: Produto = Produto("Pão de forma", 5.50, 1)

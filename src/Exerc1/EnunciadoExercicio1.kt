@@ -18,5 +18,15 @@ além disso faça uso dos conceitos vistos em sala de aula e use a criatividade.
 
 c. Sugestão: você pode criar um menu para seu programa ser
 mais amigável(isso é opcional, e caso faça use a criatividade)
+*/
 
+/* Passo a passo do q fazer
+classe caixa recebe produtos e cadastra na lista
+exibe os produtos cadastrados nessa lista
+soma os valores da lista
+
+classe produtos  atributos nome, valor, qntidade
+
+no main criar 5 objetos produto -> estático ou dinâmico
+1 objeto caixa realizar as ações de cadastro, exibir e exibir valor total
 */
