@@ -2,17 +2,17 @@ package Exerc2
 
 fun main() {
 
-    var einstein: Pessoa = Pessoa("AlbertEinstein", 14, 5, 1879)
-    einstein.informarIdade()
+    val einstein: Pessoa = Pessoa("AlbertEinstein", 14, 3, 1879)
+    einstein.informarNome()
     einstein.calcularIdade()
     einstein.informarIdade()
 
-    var newton: Pessoa = Pessoa("Isaac Newton", 4, 1, 1643)
-    newton.informarIdade()
+    val newton: Pessoa = Pessoa("Isaac Newton", 4, 1, 1643)
+    newton.informarNome()
     newton.calcularIdade()
     newton.informarIdade()
 
-    var pessoaNova: Pessoa = Pessoa()
+    val pessoaNova: Pessoa = Pessoa()
     pessoaNova.ajustaDataDeNascimento()
     pessoaNova.informarNome()
     pessoaNova.calcularIdade()

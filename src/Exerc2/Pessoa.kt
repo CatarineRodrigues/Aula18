@@ -1,22 +1,25 @@
 package Exerc2
 
+import java.time.LocalDate
+
 class Pessoa(
     private var nome: String = "",
     private var diaNascimento: Int = 0,
     private var mesNascimento: Int = 0,
     private var anoNascimento: Int = 0
 ) {
-    private var idade: Int = 0
-    private var diaAtual = 28
-    private var mesAtual = 4
-    private var anoAtual = 2022
+    private var idade = 0
+    private var diaAtual = LocalDate.now().dayOfMonth
+    private var mesAtual = LocalDate.now().monthValue
+    private var anoAtual = LocalDate.now().year
 
     fun calcularIdade() {
         idade = (anoAtual - anoNascimento)
-        if ((mesAtual <= mesNascimento) && diaAtual < diaNascimento) {
-            idade -= 1
-        } else {
-            idade
+        when {
+            (mesAtual == mesNascimento && (diaAtual < diaNascimento))-> idade -= 1
+            (mesAtual == mesNascimento && (diaAtual >= diaNascimento)) -> idade
+            mesAtual > mesNascimento -> idade
+            mesAtual < mesNascimento -> idade -= 1
         }
     }
 
