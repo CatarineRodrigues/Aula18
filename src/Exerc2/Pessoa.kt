@@ -13,10 +13,11 @@ class Pessoa(
 
     fun calcularIdade() {
         idade = (anoAtual - anoNascimento)
-        if ((mesAtual <= mesNascimento) && diaAtual < diaNascimento) {
-            idade -= 1
-        } else {
-            idade
+        when {
+            ((mesAtual > mesNascimento) && diaAtual < diaNascimento || diaAtual >= diaNascimento) -> idade
+            ((mesAtual < mesNascimento) && diaAtual < diaNascimento || diaAtual > diaNascimento) -> idade -= 1
+            (mesAtual == mesNascimento && (diaAtual < diaNascimento))-> idade -= 1
+            (mesAtual == mesNascimento && (diaAtual >= diaNascimento)) -> idade
         }
     }
 
